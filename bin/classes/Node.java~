@@ -1,0 +1,24 @@
+package src;
+
+public class Node implements Comparable {
+		
+		public Node parent;
+		public int x, y, f, g, h;
+		
+		public Node(Node parent, int x, int y) {
+			this.parent = parent;
+			this.x = x;
+			this.y = y;
+		}
+		
+		public void setF() {
+			f = g + h;
+		}
+		
+		@Override
+		public int compareTo(Object o) {
+			Node that = (Node) o;
+			return (int)this.f - that.f;
+			
+		}
+	}

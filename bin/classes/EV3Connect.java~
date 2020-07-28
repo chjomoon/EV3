@@ -1,0 +1,82 @@
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Label;
+import java.io.*;
+import java.net.*;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+/**
+ * Maximum LEGO EV3: Building Robots with Java Brains
+ * ISBN-13: 9780986832291
+ * Variant Press (C) 2014
+ * Chapter 14 - Client-Server Robotics
+ * Robot: EV3 Brick
+ * Platform: LEGO EV3
+ * @author Brian Bagnall
+ * @version July 20, 2014
+ */
+public class EV3Connect {
+
+	private static Label message;
+	private static final int MF = 0;
+	
+	public EV3Connect() {
+		String ip = "192.168.70.98"; 
+		boolean flag = true;
+		if(args.length > 0)
+			ip = args[0];
+		Socket sock = new Socket(ip, 1234);
+		System.out.println("Connected");
+		OutputStream out = sock.getOutputStream();
+		DataOutputStream dOut = new DataOutputStream(out);
+	}
+	
+	public static void main(String[] args) throws IOException {
+		PanelExample();
+
+//		String ip = "192.168.70.98"; 
+//		boolean flag = true;
+//		if(args.length > 0)
+//			ip = args[0];
+//		Socket sock = new Socket(ip, 1234);
+//		System.out.println("Connected");
+//		InputStream in = sock.getInputStream();
+//		
+//		while(flag) {
+//		DataInputStream dIn = new DataInputStream(in);
+//		String str = dIn.readUTF();
+//		flag = dIn.readBoolean();
+//		message.setText(str);
+//		System.out.println(str);
+//		}
+
+		EV3Connect ev3 = new EV3Connect();
+		ev3.moveForward();
+
+		sock.close();
+	}
+	
+	public static void moveForward() {
+		dOut.writeUTF(MF);
+	}
+	
+	static void PanelExample() {  
+        message = new Label("Coordinate");
+        Font myFont = new Font("Serif", Font.BOLD,30);
+        JFrame f= new JFrame("Panel Example");    
+        JPanel panel=new JPanel();  
+        panel.setBounds(80,80,200,200);
+        message.setFont(myFont);
+        message.setBounds(0,0,80,30);    
+        panel.add(message); 
+        f.add(panel);  
+                f.setSize(400,400);    
+                f.setLayout(null);    
+                f.setVisible(true);    
+        }  
+	
+}
+
