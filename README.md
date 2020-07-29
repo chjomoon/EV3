@@ -8,13 +8,13 @@ AgentSpeak에 의해 다양한 상황을 판단하여 움직이는 모바일 IoT
 EV3는 컬러센서, 적외선센서, 균형센서등 다양한 센서들을 활용하여 장애물을 피하거나 주변의 정보를 서버를 통해 전달하게됩니다.
 AgentSpeak은 BDI(Beliefs-Desires-Intentions) 아키텍쳐 기반의 추상언어로, 설정된 계획을 기반으로 로봇이 어떤행동을 할지 결정하게 됩니다. 
 
-프로젝트는 로봇의 3법칙에 의해 로봇의 기능을 통제하고 자율성을 부여하였습니다. 
+프로젝트는 아이작 아시모프가 제시한 로봇 3원칙에 의해 로봇의 기능을 통제하고 자율성을 부여하였습니다. 
 
-1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.
+	제1원칙: 로봇은 인간에게 해를 입혀서는 안 된다. 그리고 위험에 처한 인간을 모른 척해서도 안 된다.
 
-2. A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.
+	제2원칙: 제1원칙에 위배되지 않는 한, 로봇은 인간의 명령에 복종해야 한다.
 
-3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws
+	제3원칙: 제1원칙과 제2원칙에 위배되지 않는 한, 로봇은 로봇 자신을 지켜야 한다
 
 프로그래밍 언어 LeJos를 통해 EV3의 움직임, 위치측정, 색감지 등 기능을 구현하였습니다.
 
