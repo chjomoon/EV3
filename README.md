@@ -6,6 +6,8 @@
 
 AgentSpeak에 의해 다양한 상황을 판단하여 움직이는 모바일 IoT 로봇(EV3) 개발 프로젝트입니다. EV3는 A 알고리즘을 통해 최적의 경로를 탐사하여 목적지까지 도달합니다. EV3가 목표에 도달했을때, 에이전트는 로봇이 보내온 정보에 따라 다음지점으로 이동할지 원지점으로 돌아올지 자율적으로 결정하게 됩니다.
 EV3는 컬러센서, 적외선센서, 균형센서등 다양한 센서들을 활용하여 장애물을 피하거나 주변의 정보를 서버를 통해 전달하게됩니다.
+
+이번 프로젝트는 인명구조라는 가상상황에서 EV3가 각 지점에 도달하여 수집한 정보를 바탕으로 구조를 할지 다음 목적지를 결정하게 됩니다. AgentSpeak은 목표지점에서 수집된 정보를 미리설정된 기준에 따라 자율적으로 결정하는 기능 구현하였습니다.
 AgentSpeak은 BDI(Beliefs-Desires-Intentions) 아키텍쳐 기반의 추상언어로, 설정된 계획을 기반으로 로봇이 어떤행동을 할지 결정하게 됩니다. 
 
 프로젝트는 아이작 아시모프가 제시한 로봇 3원칙에 의해 로봇의 기능을 구현하였습니다. 
@@ -16,7 +18,7 @@ AgentSpeak은 BDI(Beliefs-Desires-Intentions) 아키텍쳐 기반의 추상언�
 
 	제3원칙: 제1원칙과 제2원칙에 위배되지 않는 한, 로봇은 로봇 자신을 지켜야 한다
 
-프로그래밍 언어 LeJos를 통해 EV3의 움직임, 위치측정, 색감지 등 기능을 구현하였습니다.
+프로그래밍 언어 LeJos를 통해 EV3의 장애물 회피, 움직임, 위치측정, 색감지 등 기능을 구현하였습니다.
 
 * A mobile IoT robot(EV3) that handles multiple forms of uncertainty under the autonomous agents called AgentSpeak. EV3 can navigate the path based on A* algorithm by finding a shortest pathway to reach a destination. Once EV3 reaches the point, the robot can send information to the agents, deciding whether returning to the base or finding a next point.
 
@@ -241,7 +243,6 @@ public String getColor(String side) {
 ### JASON AgentSpeak
 
 AgentSpeak은 주어진 가상환경을 구현하는 추상언어입니다. AgentSpeak은 어떻게 목표를 이루고, 지속적으로 작동하여 발생하는 이벤트에 반응하고 계획을 처리합니다.
-이번 프로젝트는 인명구조라는 가상상황에서 EV3가 각 지점에 도달하여 수집한 정보를 바탕으로 구조를 할지 다음 목적지를 결정하게 됩니다. AgentSpeak은 목표지점에서 수집된 정보를 미리설정된 기준에 따라 자율적으로 결정하는 기능 구현하였습니다.
 
 * AgentSpeak models an agent situated in an environment
 
