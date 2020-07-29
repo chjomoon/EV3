@@ -30,9 +30,9 @@ AgentSpeak은 BDI(Beliefs-Desires-Intentions) 아키텍쳐 기반의 추상언�
 
 * Java Frameworks
 
-  * [LeJos] 
+	* [LeJos](http://www.lejos.org/ev3.php)
   
-  * [JASON]  
+	* [JASON](http://jason.sourceforge.net/wp/)  
 
 * Mindstorms EV3
 
@@ -278,6 +278,4 @@ AgentSpeak은 주어진 가상환경을 구현하는 추상언어입니다. Agen
 		-proposal(CNPId,_,_).
 </pre></code>
 
-[LeJos] : http://www.lejos.org/ev3.php
-  
-[JASON] : http://jason.sourceforge.net/wp/
+
