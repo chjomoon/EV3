@@ -2,7 +2,7 @@
 
 ## Project Description
 
-* A mobile ioT robot(EV3) that handles multiple forms of uncertainty under the autonomous agents called AgentSpeak. EV3 can navigate the path based on A* algorithm by finding a shortest pathway to reach a destination. Once EV3 reaches the point, the robot can send information to the agents, deciding whether returning to the base or finding a next point.
+* A mobile IoT robot(EV3) that handles multiple forms of uncertainty under the autonomous agents called AgentSpeak. EV3 can navigate the path based on A* algorithm by finding a shortest pathway to reach a destination. Once EV3 reaches the point, the robot can send information to the agents, deciding whether returning to the base or finding a next point.
 
 * EV3 uses various sensors such as color, ultrasonic, and gyroscope to avoid an obstacle or to send details of the surroundings.
 
