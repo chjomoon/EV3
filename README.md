@@ -230,7 +230,7 @@ public String getColor(String side) {
     .....
 </pre></code>
 
-### [JASON] (AgentSpeak)
+### JASON AgentSpeak
 
 AgentSpeak은 주어진 가상환경을 구현하는 추상언어입니다. AgentSpeak은 어떻게 목표를 이루고, 지속적으로 작동하여 발생하는 이벤트에 반응하고 계획을 처리합니다.
 
